@@ -51,7 +51,7 @@ def view_passwords(user_id):
     try:
         # Fetch all passwords for the user
         cursor.execute(
-            "SELECT id, website, web_username, password FROM passwords WHERE user_id = %s",
+            "SELECT id, website, web_username, web_password FROM passwords WHERE user_id = %s",
             (user_id,)
         )
         results = cursor.fetchall()
